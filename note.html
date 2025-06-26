@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Notes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Adsterra Script -->
+  <script type='text/javascript' src='https://www.profitableratecpm.com/kzj4aq41?key=307e7153dc23f2783cfaeccb75ffc96c'></script>
+
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-green-100 to-blue-100 min-h-screen p-6">
+
+  <div class="max-w-md mx-auto bg-white p-6 rounded-2xl shadow-2xl border border-green-300">
+    <h1 class="text-3xl font-bold mb-4 text-center text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-blue-600">📝 Saved Notes</h1>
+
+    <textarea
+      id="noteContent"
+      rows="10"
+      class="w-full p-4 border-2 border-green-400 rounded-lg text-sm text-gray-800 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-green-500 shadow-inner"
+      placeholder="Write your notes here..."></textarea>
+
+    <!-- Adsterra Inline Banner -->
+    <div class="my-4 text-center">
+      <iframe
+        src="https://www.profitableratecpm.com/kzj4aq41?key=307e7153dc23f2783cfaeccb75ffc96c"
+        style="width:100%;height:90px;border:none;overflow:hidden;"
+        scrolling="no"
+        frameborder="0">
+      </iframe>
+    </div>
+
+    <div class="flex justify-between mt-4">
+      <a href="index.html" class="bg-indigo-600 hover:bg-indigo-700 transition text-white px-4 py-2 rounded-lg shadow">← Back</a>
+      <button id="saveNote" class="bg-green-600 hover:bg-green-700 transition text-white px-4 py-2 rounded-lg shadow">💾 Save</button>
+    </div>
+  </div>
+
+  <script>
+    const textarea = document.getElementById("noteContent");
+    const saveBtn = document.getElementById("saveNote");
+
+    textarea.value = localStorage.getItem("calc-notes") || "";
+
+    saveBtn.onclick = () => {
+      localStorage.setItem("calc-notes", textarea.value);
+      alert("✅ Notes saved successfully!");
+    };
+  </script>
+</body>
+</html>

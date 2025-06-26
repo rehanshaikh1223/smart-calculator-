@@ -1,0 +1,6 @@
+{
+  "appId": "com.rssoftware.smartcalculator",
+  "appName": "smart calculator",
+  "webDir": "www",
+  "bundledWebRuntime": false
+}
